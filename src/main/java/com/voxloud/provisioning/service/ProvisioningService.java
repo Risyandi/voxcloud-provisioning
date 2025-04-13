@@ -1,6 +1,13 @@
 package com.voxloud.provisioning.service;
 
-public interface ProvisioningService {
+import java.util.List;
 
-    String getProvisioningFile(String macAddress);
+import com.voxloud.provisioning.entity.Device;
+
+public interface ProvisioningService {
+    List<Device> getAllDevices();
+
+    List<Device> getDevicesById(String mac);
+
+    String generateConfiguration(String macAddress);
 }
