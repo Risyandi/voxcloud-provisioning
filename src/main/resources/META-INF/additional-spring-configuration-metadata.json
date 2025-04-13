@@ -1,0 +1,19 @@
+{
+    "properties": [
+        {
+            "name": "provisioning.port",
+            "type": "java.lang.String",
+            "description": "A description for 'provisioning.port'"
+        },
+        {
+            "name": "provisioning.domain",
+            "type": "java.lang.String",
+            "description": "A description for 'provisioning.domain'"
+        },
+        {
+            "name": "provisioning.codecs",
+            "type": "java.lang.String",
+            "description": "A description for 'provisioning.codecs'"
+        }
+    ]
+}

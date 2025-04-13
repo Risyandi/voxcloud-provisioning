@@ -5,29 +5,34 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Data
+@Getter
+@Setter
 public class Device {
 
     @Id
-    @Column(name = "mac_address")
+    @Column(name = "MAC_ADDRESS")
     private String macAddress;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private DeviceModel model;
+    private DeviceType model;
 
-    @Column(name = "override_fragment")
+    @Lob
+    @Column(name = "OVERRIDE_FRAGMENT")
     private String overrideFragment;
 
     private String username;
-
     private String password;
 
-    public enum DeviceModel {
+    public enum DeviceType {
         CONFERENCE,
         DESK
     }
